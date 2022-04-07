@@ -1,0 +1,55 @@
+﻿@model EveriHoldings.ClientModel
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Everi Interview - Test A (MVC) - Rev. 2022</title>
+</head>
+
+<body>
+    @using (@Html.BeginForm("Submit", "Client", FormMethod.Post))
+    {
+        <table>
+            <tr>
+                <td>@Html.Label("Label")</td>
+                <td>@Html.TextBox("textBox")</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><input type="submit" value="Submit" /></td>
+                <td></td>
+            </tr>
+        </table>
+    }
+
+    <div id="client-details">
+        <h2>Client Details</h2>
+    </div>
+    <td>@Html.LabelFor(a => a.DriversLicense)</td>
+    @Html.EditorFor(model => model.DriversLicense)
+    <td>@Html.LabelFor(a => a.DateOfBirth)</td>
+    @Html.EditorFor(model => model.DateOfBirth)
+    <td>@Html.LabelFor(a => a.AnnualSalary)</td>
+    @Html.EditorFor(model => model.AnnualSalary)
+    <td>@Html.LabelFor(a => a.FirstName)</td>
+    @Html.EditorFor(model => model.FirstName)
+    <td>@Html.LabelFor(a => a.MiddleName)</td>
+    @Html.EditorFor(model => model.MiddleName)
+    <td>@Html.LabelFor(a => a.LastName)</td>
+    @Html.EditorFor(model => model.LastName)
+    <td>@Html.LabelFor(a => a.MonthlySpending)</td>
+    <div id="results">
+        <h2>Results</h2>
+    </div><!-- //#results -->
+
+    <div id="visuals">
+        <h2>Visuals</h2>
+    </div><!-- //#visuals -->
+</body>
+</html>

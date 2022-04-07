@@ -1,0 +1,20 @@
+﻿@model EveriHoldings.ClientModel
+@{
+    ViewBag.Title = "Submit";
+}
+
+<h2>Submit</h2>
+
+<td>Drivers License @Html.LabelFor(a => a.DriversLicense)</td>
+@Html.ValueFor(model => model.DriversLicense)
+<td>@Html.LabelFor(a => a.DriversLicense)</td>
+   Date Of Birth @Html.EditorFor(model => model.DateOfBirth)
+<td>@Html.LabelFor(a => a.AnnualSalary)</td>
+@Html.ValueFor(model => model.AnnualSalary)
+<td>@Html.LabelFor(a => a.FirstName)</td>
+@Html.ValueFor(model => model.FirstName)
+<td>@Html.LabelFor(a => a.MiddleName)</td>
+@Html.ValueFor(model => model.MiddleName)
+<td>@Html.LabelFor(a => a.LastName)</td>
+@Html.ValueFor(model => model.LastName)
+<td>@Html.LabelFor(a => a.MonthlySpending)</td>
